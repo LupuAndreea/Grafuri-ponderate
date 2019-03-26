@@ -96,24 +96,24 @@ ostream& operator << (ostream & output, Graf& g1) {
 	return output;
 }
 
-//Graf operator *(const Graf & g1, const Graf & g2) {
-//
-//	auto g3 = new Graf(10);
-//	if (g1.size == g2.size) {
-//		g3->size = g1.size;
-//		for (int i = 1; i <= g1.size; i++)
-//			for (int j = 1; j <= g1.size; j++) {
-//				if (g1.matrix[i][j] < g2.matrix[i][j])
-//					g3->matrix[i][j] = g1.matrix[i][j];
-//				else
-//					g3->matrix[i][j] = g2.matrix[i][j];
-//			}
-//		return *g3;
-//
-//	}
-//	cout <<" Grafurile alese nu au acelas numar de noduri " << endl;
-//
-//}
+Graf operator *(const Graf & g1, const Graf & g2) {
+
+	auto g3 = new Graf(10);
+	if (g1.size == g2.size) {
+		g3->size = g1.size;
+		for (int i = 1; i <= g1.size; i++)
+			for (int j = 1; j <= g1.size; j++) {
+				if (g1.matrix[i][j] < g2.matrix[i][j])
+					g3->matrix[i][j] = g1.matrix[i][j];
+				else
+					g3->matrix[i][j] = g2.matrix[i][j];
+			}
+		return *g3;
+
+	}
+	cout <<" Grafurile alese nu au acelas numar de noduri " << endl;
+
+}
 Graf  operator == (const Graf & g1, const Graf & g2) {
 	if (g1.size == g2.size) {
 
