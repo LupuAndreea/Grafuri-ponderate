@@ -67,7 +67,7 @@ public:
 
 	friend istream &operator >> (istream & input, Graf& g1);
 	friend ostream &operator << (ostream & output, Graf& g1);
-// friend Graf operator *(const Graf &, const Graf &);
+    friend Graf operator *(const Graf &, const Graf &);
 	friend Graf operator ==(const Graf &, const Graf &);
 
 	
@@ -283,8 +283,8 @@ int main(){
 	cin >> g2;
 	cout << g2 << endl;
 	
-	/*g3 = g1 * g2;
-	cout << g3;*/
+	g3 = g1 * g2;
+	cout << g3;
 	
 	g1 == g2;
 
